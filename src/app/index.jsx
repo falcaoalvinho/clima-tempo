@@ -1,12 +1,31 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import appIcon from '../../assets/images/icons/AppIcon.png'
+import hamburguerMenu from '../../assets/images/icons/HamburgerMenu.png'
+
+import nilsinho from '../../assets/images/nilsinho/Sunny.png'
+import weatherIcon from '../../assets/images/weatherIcons/ClearDay.png'
+
+import humidityIcon from '../../assets/images/icons/Humidity.png'
+import rainIcon from '../../assets/images/icons/Rain.png'
+import windIcon from '../../assets/images/icons/Wind.png'
+
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+
+const collors = {
+    red : '#D20000',
+    orange: '#FF8800',
+    green : '#31D200',
+    blue: '#276BBA',
+    purple: '#9747FF'
+
+}
 
 export default function Index(){
     return (
         <ScrollView>  
             <View style={style.container}>
                 <View style={style.header}>
-                    <View style={style.headerIcon}/>
-                    <View style={style.headerIcon}/>
+                    <Image style={style.headerIcon} source={appIcon} />
+                    <Image style={style.hamburguerMenu} source={hamburguerMenu}/>
                 </View>
 
                 <View style={style.previewContainer}>
@@ -15,12 +34,12 @@ export default function Index(){
                         <Text style={style.smallSubTitle}>Segunda-feira, Jan 01</Text>
                     </View>
 
-                    <View style={style.previewImage}/>
+                    <Image style={style.previewImage} source={weatherIcon}/>
 
                     <View style={style.temperatureContainer}>
-                        <Text style={style.smallTitle}>Placeholder</Text>
-                        <Text style={style.textTemperature}>25ºC</Text>
-                        <View style={style.nilsinhoImage}/>
+                        <Text style={[style.smallTitle, {color: collors.orange}]}>Ensolarado</Text>
+                        <Text style={style.textTemperature}>30ºC</Text>
+                        <Image style={style.nilsinhoImage} source={nilsinho}/>
                     </View>
                 </View>
 
@@ -28,25 +47,25 @@ export default function Index(){
                 <View style={style.tablePreview}>
 
                     <View style={style.tableIten}>
-                        <View style={style.tableIcon}/>
+                        <Image style={style.tableIcon} source={rainIcon}/>
                         <Text style={style.tableText}>Chance de Chuva: </Text>
-                        <Text style={style.tableTextSpam}>50%</Text>
+                        <Text style={[style.tableTextSpam, {color: collors.blue}]}>50%</Text>
                     </View>
 
                     <View style={style.lineTableDetail}/>
 
                     <View style={style.tableIten}>
-                        <View style={style.tableIcon}/>
+                        <Image style={style.tableIcon} source={humidityIcon}/>
                         <Text style={style.tableText}>Umidade do ar: </Text>
-                        <Text style={style.tableTextSpam}>Normal</Text>
+                        <Text style={[style.tableTextSpam, {color: collors.blue}]}>Normal</Text>
                     </View>
 
                     <View style={style.lineTableDetail}/>
 
                     <View style={style.tableIten}>
-                        <View style={style.tableIcon}/>
+                        <Image style={style.tableIcon} source={windIcon}/>
                         <Text style={style.tableText}>Velocidade do vento: </Text>
-                        <Text style={style.tableTextSpam}>5m/s</Text>
+                        <Text style={[style.tableTextSpam, {color: collors.purple}]}>5m/s</Text>
                     </View>
                 </View>
 
@@ -119,8 +138,10 @@ const style = StyleSheet.create(
         headerIcon: {
             width: 75,
             height: 75,
-            backgroundColor: '#989898',
-            borderRadius: 15
+        },
+        hamburguerMenu: {
+            height: 37,
+            width: 50
         },
         previewContainer: {
             width: '100%',
@@ -134,7 +155,7 @@ const style = StyleSheet.create(
             backgroundColor: '#212121',
             borderRadius: 15,
             borderWidth: 3,
-            borderColor: '#989898'
+            borderColor: collors.orange
 
         },
         textContainer: {
@@ -159,8 +180,6 @@ const style = StyleSheet.create(
         previewImage: {
             width: 200,
             height: 200,
-
-            backgroundColor: '#989898'
         },
         temperatureContainer: {
             width: '100%',
@@ -173,7 +192,7 @@ const style = StyleSheet.create(
             fontWeight: '900',
             lineHeight: 60,
 
-            color: '#fff'
+            color: collors.orange
         },
         tablePreview: {
             width: '100%',
@@ -196,16 +215,12 @@ const style = StyleSheet.create(
             gap: 10,
         },
         tableIcon: {
-            alignItems: 'flex_start',
-            justifyContent: 'center',
-
             width: 30,
             height: 30,
-            backgroundColor: '#989898'
         },
         lineTableDetail: {
             height: 1,
-            width: '80%',
+            width: '90%',
             borderRadius: 3,
             backgroundColor:'#989898'
         },
@@ -220,9 +235,8 @@ const style = StyleSheet.create(
             color: '#989898'
         },
         nilsinhoImage: {
-            width: 170,
-            height: 170,
-            backgroundColor: '#d9d9d9',
+            width: 200,
+            height: 200,
 
             position: 'absolute',
             left: '50%',
