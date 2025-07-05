@@ -19,7 +19,7 @@ const collors = {
 
 }
 
-export default function Index(){
+export default function MainPage(){
     return (
         <ScrollView>  
             <View style={style.container}>
@@ -209,7 +209,8 @@ const style = StyleSheet.create(
         },
         tableIten: {
             width: '100%',
-
+            
+            alignItems: 'center',
             flexDirection: 'row',
             padding: 10,
             gap: 10,
