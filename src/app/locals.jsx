@@ -3,7 +3,7 @@ import deleteIcon from "../../assets/images/icons/DeleteIcon.png"
 import searchIcon from "../../assets/images/icons/SearchIcon.png"
 
 
-export  function LocalList(){
+export function LocalsPage(){
     return(
         <View style={style.container}>
             <View style={style.searchContainer}>

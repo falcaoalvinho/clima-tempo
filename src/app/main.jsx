@@ -19,7 +19,7 @@ const collors = {
 
 }
 
-export function MainPage(){
+export default function MainPage(){
     return (
         <ScrollView>  
             <View style={style.container}>
