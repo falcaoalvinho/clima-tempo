@@ -23,9 +23,10 @@ export default function MainPage(){
     return (
         <ScrollView>  
             <View style={style.container}>
-                <View style={style.header}>
-                    <Image style={style.headerIcon} source={appIcon} />
-                    <Image style={style.hamburguerMenu} source={hamburguerMenu}/>
+                <View style={style.header.container}>
+                    <Image style={style.header.icon} source={appIcon} />
+                    
+                    <Image style={style.header.menu} source={hamburguerMenu}/>
                 </View>
 
                 <View style={style.previewContainer}>
@@ -130,19 +131,23 @@ const style = StyleSheet.create(
             backgroundColor: '#171717'
         },
         header: {
-            width: '100%',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'space-between',
+            container: {
+                width: '100%',
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+            },
+            icon: {
+                width: 75,
+                height: 75,
+            },
+            menu: {
+                height: 37,
+                width: 50
+
+            }
         },
-        headerIcon: {
-            width: 75,
-            height: 75,
-        },
-        hamburguerMenu: {
-            height: 37,
-            width: 50
-        },
+
         previewContainer: {
             width: '100%',
             
