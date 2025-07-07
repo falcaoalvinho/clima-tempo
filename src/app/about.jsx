@@ -24,7 +24,7 @@ export function AboutPage(){
                 
                 <Text style={styles.aboutText}>
                     O projeto <Text style={styles.aboutTextSpam}>ClimaTempo</Text>, surgiu de uma atividade do curso técnico de desenvolvimento de sistemas ofertado pelo <Text style={styles.aboutTextSpam}>SENAI</Text>.
-                    O objetivo da atividade, prototipar e programar uma interface mobile temática usando <Text style={styles.aboutTextSpam}>React-Native</Text> que fosse capaz de consumir a <Text style={styles.aboutTextSpam}>API Openweather</Text>e disponibilizar dados sobre diferentes locais através de interações com o usuário.
+                    O objetivo da atividade, prototipar e programar uma interface mobile temática usando <Text style={styles.aboutTextSpam}>React-Native</Text> que fosse capaz de consumir a <Text style={styles.aboutTextSpam}>API Openweather</Text> e disponibilizar dados sobre diferentes locais através de interações com o usuário.
                     Na época, escolhemos como tema a relação da atual situação climática com a crise ambiental, deste contexto e de uma brincadeira entre os membros do grupo surgiu o <Text style={styles.aboutTextSpam}>Nilsinho</Text>, que para além de buscar desenvolver essa relação, propõe uma identidade visual para o projeto fortemente inspirada outros aplicativos como o <Text style={styles.aboutTextSpam}>Duolingo</Text>.
                 </Text>
             </View>

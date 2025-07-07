@@ -8,7 +8,24 @@ import humidityIcon from '../../assets/images/icons/Humidity.png'
 import rainIcon from '../../assets/images/icons/Rain.png'
 import windIcon from '../../assets/images/icons/Wind.png'
 
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, View, } from 'react-native'
+
+// fetch(`http://api.openweathermap.org/data/2.5/forecast?q=São Paulo&appid=${APIKEY}`)
+//     .then(response => {
+//     // Lógica para manipular a resposta (ex: verificar se a resposta foi bem-sucedida)
+//     if (!response.ok) {
+//         throw new Error('Erro na requisição: ' + response.status);
+//     }
+//     return response.json(); // Ou response.text(), response.blob(), etc., dependendo do tipo de dado
+//     })
+//     .then(data => {
+//         // Código para manipulação dos dados do JSON
+//     console.log(data);
+//     })
+//     .catch(error => {
+//     // Lógica para lidar com erros
+//     console.error('Ocorreu um erro:', error);
+//     });
 
 const collors = {
     red : '#D20000',
@@ -25,7 +42,7 @@ export default function MainPage(){
             <View style={style.container}>
                 <View style={style.header.container}>
                     <Image style={style.header.icon} source={appIcon} />
-                    
+
                     <Image style={style.header.menu} source={hamburguerMenu}/>
                 </View>
 
@@ -147,7 +164,6 @@ const style = StyleSheet.create(
 
             }
         },
-
         previewContainer: {
             width: '100%',
             
